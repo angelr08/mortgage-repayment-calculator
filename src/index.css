@@ -1,0 +1,56 @@
+:root {
+  /*Colors*/
+  --lime: hsl(61, 70%, 52%);
+  --red: hsl(4, 69%, 50%);
+  --slate100: hsl(202, 86%, 94%);
+  --slate300: hsl(203, 41%, 72%);
+  --slate500: hsl(200, 26%, 54%);
+  --slate700: hsl(200, 24%, 40%);
+  --slate900: hsl(202, 55%, 16%);
+  --lightLime: hsl(60, 72%, 93%);
+  --darkBackground: hsl(202, 56%, 12%);
+
+  /*Fonts*/
+  --jakarta: 'Plus Jakarta Sans', sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--jakarta);
+}
+
+#root {
+  width: 1024px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    min-height: 100svh;
+    place-content: center;
+    background-color: var(--slate100);
+  }
+  #root {
+    min-height: 600px;
+    flex-direction: row;
+    gap: 0;
+  }
+}
